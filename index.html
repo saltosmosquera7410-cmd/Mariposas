@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🦋 Mundo de las Mariposas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#ffe6f7,#d8f3dc,#d0f4ff);
+overflow-x:hidden;
+}
+
+/* Barra */
+
+nav{
+
+position:fixed;
+top:0;
+width:100%;
+background:rgba(255,255,255,.8);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:center;
+gap:40px;
+padding:18px;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+nav a{
+
+text-decoration:none;
+color:#e91e63;
+font-weight:bold;
+transition:.4s;
+
+}
+
+nav a:hover{
+
+color:#6a1b9a;
+transform:scale(1.1);
+
+}
+
+/* Portada */
+
+header{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:url("https://images.unsplash.com/photo-1468327768560-75b778cbb551?w=1600") center/cover;
+
+}
+
+.capa{
+
+background:rgba(0,0,0,.45);
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+
+}
+
+header h1{
+
+font-size:70px;
+text-shadow:4px 4px 10px black;
+
+}
+
+header p{
+
+font-size:25px;
+margin-top:20px;
+
+}
+
+button{
+
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:#ff4081;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.4s;
+
+}
+
+button:hover{
+
+background:#6a1b9a;
+transform:scale(1.1);
+
+}
+
+/* Mariposas */
+
+.mariposa{
+
+position:fixed;
+font-size:40px;
+animation:volar 12s linear infinite;
+
+}
+
+.m1{
+left:5%;
+animation-delay:0s;
+}
+
+.m2{
+left:40%;
+animation-delay:4s;
+}
+
+.m3{
+left:75%;
+animation-delay:8s;
+}
+
+@keyframes volar{
+
+0%{
+top:110%;
+transform:rotate(0deg);
+}
+
+100%{
+top:-10%;
+transform:rotate(360deg);
+}
+
+}
+
+/* Secciones */
+
+section{
+
+padding:80px 10%;
+
+}
+
+h2{
+
+text-align:center;
+font-size:45px;
+margin-bottom:40px;
+color:#6a1b9a;
+
+}
+
+/* Tarjetas */
+
+.contenedor{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+
+}
+
+.card{
+
+width:330px;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 15px 25px rgba(0,0,0,.2);
+transition:.5s;
+
+}
+
+.card:hover{
+
+transform:translateY(-15px);
+
+}
+
+.card img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+
+}
+
+.card h3{
+
+padding:15px;
+color:#e91e63;
+
+}
+
+.card p{
+
+padding:15px;
+text-align:justify;
+
+}
+
+/* Galería */
+
+.galeria{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+
+}
+
+.galeria img{
+
+width:100%;
+height:260px;
+border-radius:20px;
+transition:.5s;
+cursor:pointer;
+
+}
+
+.galeria img:hover{
+
+transform:scale(1.08) rotate(2deg);
+
+}
+
+/* Video */
+
+.video{
+
+display:flex;
+justify-content:center;
+
+}
+
+iframe{
+
+width:900px;
+height:500px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+footer{
+
+background:#6a1b9a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="mariposa m1">🦋</div>
+<div class="mariposa m2">🦋</div>
+<div class="mariposa m3">🦋</div>
+
+<nav>
+
+<a href="#info">Información</a>
+<a href="#tipos">Especies</a>
+<a href="#galeria">Galería</a>
+<a href="#video">Video</a>
+
+</nav>
+
+<header>
+
+<div class="capa">
+
+<h1>🦋 Mundo de las Mariposas</h1>
+
+<p>Descubre la belleza de uno de los insectos más sorprendentes del planeta.</p>
+
+<button onclick="document.getElementById('info').scrollIntoView()">
+Explorar
+</button>
+
+</div>
+
+</header>
+
+<section id="info">
+
+<h2>¿Qué son las mariposas?</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="https://palmitospark.es/wp-content/uploads/2023/04/butterfly-g31bc30040_1280-1024x768.jpg">
+
+<h3>Características</h3>
+
+<p>
+Las mariposas poseen alas llenas de colores, antenas y una larga trompa con la que se alimentan del néctar de las flores.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_sI3a0-tk2Fla4ULJS9zLh7lni1wIprIVOPOgZqwzl4myyyzBx-hf-x05&s=10">
+
+<h3>Metamorfosis</h3>
+
+<p>
+Su ciclo de vida consta de cuatro etapas: huevo, oruga, crisálida y mariposa adulta.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://www.ejemplos.co/wp-content/uploads/2017/10/metamorfosis-de-las-mariposas.jpg">
+
+<h3>Importancia</h3>
+
+<p>
+Ayudan a polinizar muchas plantas y son indicadores de un ambiente saludable.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="galeria">
+
+<h2>Galería</h2>
+
+<div class="galeria">
+
+<img src="https://palmitospark.es/wp-content/uploads/2023/04/butterfly-g31bc30040_1280-1024x768.jpg">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_sI3a0-tk2Fla4ULJS9zLh7lni1wIprIVOPOgZqwzl4myyyzBx-hf-x05&s=10">
+
+<img src="https://www.ejemplos.co/wp-content/uploads/2017/10/metamorfosis-de-las-mariposas.jpg">
+
+<img src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?w=1600">
+
+</div>
+
+<footer>
+
+<h2>🦋 Las mariposas llenan el mundo de color y vida.</h2>
+
+<p>Gracias por su atencion🤗❤️</p>
+
+</footer>
+
+</body>
+
+</html>
